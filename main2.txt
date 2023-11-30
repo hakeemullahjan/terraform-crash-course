@@ -1,0 +1,43 @@
+# resource "aws_instance" "my-first-instance-tf" {
+#   ami           = "ami-0fc5d935ebf8bc3bc"
+#   instance_type = "t2.micro"
+
+#   tags = {
+#     Name = "UbuntuServer3"
+#   }
+# }
+
+
+# resource "aws_vpc" "my-vpc" {
+#   cidr_block = "10.0.0.0/16"
+
+#   tags = {
+#     Name = "prod-vpc"
+#   }
+# }
+
+# resource "aws_subnet" "my-subnet" {
+#   vpc_id     = aws_vpc.my-vpc.id
+#   cidr_block = "10.0.0.0/24"
+
+#   tags = {
+#     Name = "prod-subnet"
+#   }
+# }
+
+# resource "aws_vpc" "second-vpc" {
+#   cidr_block = "10.1.0.0/16"
+
+#   tags = {
+#     Name = "dev-vpc"
+#   }
+# }
+
+# resource "aws_subnet" "dev-subnet" {
+#   vpc_id     = aws_vpc.second-vpc.id
+#   cidr_block = "10.1.0.0/24"
+
+#   tags = {
+#     Name = "dev-subnet"
+#   }
+# }
